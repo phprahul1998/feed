@@ -20,6 +20,7 @@ export default function Postnews() {
           body: JSON.stringify({ query }),
         });
         setshowerror("");
+        setQuery("");
         if (response.ok) {
           setsuccessmessage("News posted successfully");
         } else {
