@@ -4,7 +4,6 @@ import axios from "axios";
 import Image from "next/image";
 import { CiShare2 } from "react-icons/ci";
 import { relative } from "path";
-
 const Newscard = () => {
   const [newsData, setNewsData] = useState([]);
   useEffect(() => {
