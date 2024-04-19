@@ -11,7 +11,9 @@ export default async function handler(req, res) {
     if (req.method === "OPTIONS") {
       return res.status(200).end();
     }
-    const response = await axios.get("https://vaani.softage.net/api/v1/news");
+    const response = await axios.get(
+      "https://vaani.softage.net/vaani/api/v1/news"
+    );
     const data = response.data;
     res.status(200).json(data);
   } catch (error) {

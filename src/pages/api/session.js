@@ -63,7 +63,7 @@ export default async function handler(req, res) {
           };
 
           await axios.post(
-            "https://vaani.softage.net/api/v1/savenews",
+            "https://vaani.softage.net/vaani/api/v1/savenews",
             postData
           );
           return {

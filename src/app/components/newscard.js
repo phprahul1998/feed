@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Image from "next/image";
 import { CiShare2 } from "react-icons/ci";
+import { relative } from "path";
 
 const Newscard = () => {
   const [newsData, setNewsData] = useState([]);
@@ -23,6 +24,13 @@ const Newscard = () => {
 
   return (
     <div>
+      <button
+        style={{ zIndex: 9999, position: "relative" }}
+        onClick={getNewsFeeds}
+      >
+        {" "}
+        get neww
+      </button>
       {newsData.map((item, index) => (
         <div
           className="NewsCard"
