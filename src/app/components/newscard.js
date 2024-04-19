@@ -23,13 +23,6 @@ const Newscard = () => {
 
   return (
     <div>
-      <button
-        style={{ zIndex: 9999, position: "relative" }}
-        onClick={getNewsFeeds}
-      >
-        {" "}
-        get neww
-      </button>
       {newsData.map((item, index) => (
         <div
           className="NewsCard"
