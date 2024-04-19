@@ -11,7 +11,7 @@ export default async function handler(req, res) {
     "X-Requested-With, Content-Type, Accept, Authorization"
   );
   const { query } = req.body;
-  const query1 = "IPL news";
+  const query1 = "Top stoies of india";
   const accessKey = "adb0cfcc77074ab38735db68a601a3a0";
   const endpoint = `https://api.bing.microsoft.com/v7.0/search?q=${query1}&responseFilter=news`;
   try {
