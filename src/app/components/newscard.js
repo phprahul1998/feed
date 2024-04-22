@@ -21,13 +21,36 @@ const Newscard = () => {
       .catch((error) => {});
   }
 
+  function handleShare(event, item) {
+    event.preventDefault();
+    try {
+      if (navigator.share) {
+        navigator
+          .share({
+            title: item.heading,
+            text: item.para,
+            url: item.image_url,
+          })
+          .then(() => console.log("Content shared successfully!"))
+          .catch((error) => console.error("Error sharing content:", error));
+      } else {
+        console.log("Web Share API is not supported.");
+      }
+    } catch (error) {
+      console.error("Error sharing content:", error);
+    }
+  }
+
   return (
     <>
       {newsData.map((item, index) => (
         <div
           className="NewsCard"
           key={index}
-          style={{ backgroundColor: item.colorCode }}
+          style={{
+            backgroundColor: item.colorCode,
+            border: `4px solid ${item.colorCode}`,
+          }}
         >
           <div className="newImg">
             <img src={item.image_url} alt="" />
@@ -35,8 +58,10 @@ const Newscard = () => {
           <div className="newsdata">
             <h1>{item.heading}</h1>
             <p>{item.para}</p>
-            <div>
-              <CiShare2 />
+            <div className="social-icons">
+              <a href="#" onClick={(e) => handleShare(e, item)}>
+                <CiShare2 />
+              </a>
             </div>
           </div>
         </div>

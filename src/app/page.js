@@ -8,9 +8,9 @@ export default function Home() {
     <div className="container-fluid">
       <div className="row">
         <div className="col-sm-12 col-xs-12 col-md-6 col-lg-5 col-xl-5">
-          {/* <div className="title ">
+          <div className="title ">
             <h4>Discover</h4>
-          </div> */}
+          </div>
           <Newscard />
         </div>
       </div>
