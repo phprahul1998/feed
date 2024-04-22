@@ -50,10 +50,11 @@ li {
   color: #fff;
   font-size: 20px;
   background: transparent;
-  margin-left: 1px;
-  font-weight: 300;
-  letter-spacing: 3px;
-  flex-grow: 1;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 0;
 }
 
 ::-webkit-scrollbar {
@@ -63,18 +64,10 @@ li {
 
 .bottom-nav {
   height: 65px;
-  position: fixed;
-  bottom: 0;
-  z-index: 100;
-  width: 100%;
 }
-@media (min-width: 768px) {
-  .bottom-nav {
-    width: 33%;
-  }
+@media (max-width: 768px) {
 }
 .bottom-nav ul {
-  width: 98%;
   height: 77px;
   display: -webkit-box;
   display: -ms-flexbox;

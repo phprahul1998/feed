@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Image from "next/image";
+
 import { CiShare2 } from "react-icons/ci";
 import { relative } from "path";
 const Newscard = () => {
@@ -9,7 +10,6 @@ const Newscard = () => {
   useEffect(() => {
     getNewsFeeds();
   }, []);
-
   function getNewsFeeds() {
     setNewsData([]);
     axios
@@ -22,12 +22,12 @@ const Newscard = () => {
   }
 
   return (
-    <div>
+    <>
       {newsData.map((item, index) => (
         <div
           className="NewsCard"
           key={index}
-          style={{ backgroundColor: "#000" }}
+          style={{ backgroundColor: item.colorCode }}
         >
           <div className="newImg">
             <img src={item.image_url} alt="" />
@@ -41,7 +41,7 @@ const Newscard = () => {
           </div>
         </div>
       ))}
-    </div>
+    </>
   );
 };
 
