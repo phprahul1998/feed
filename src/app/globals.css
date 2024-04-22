@@ -45,7 +45,9 @@ li {
   text-align: center;
   width: 100%;
 }
-
+.text-mute {
+  color: #979797 !important;
+}
 .title h4 {
   color: #fff;
   font-size: 20px;
@@ -89,6 +91,7 @@ li {
 .bottom-nav ul li {
   color: #fff;
   font-size: 13px;
+  font-weight: 900;
   text-align: center;
 }
 .NewsCard {
@@ -101,6 +104,7 @@ li {
   width: 100%;
   height: 200px;
   object-fit: cover;
+  border-radius: 10px;
 }
 .NewsCard .newsdata {
   color: #fff;

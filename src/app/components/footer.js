@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <div className="bottom-nav">
       <ul>
-        <li className="first">
+        <li className="first text-mute">
           <CiSearch />
           <p>Search</p>
         </li>
@@ -15,7 +15,7 @@ const Footer = () => {
           <FaCompass />
           <p>Discover</p>
         </li>
-        <li className="third">
+        <li className="third text-mute">
           <BiFoodMenu />
           <p>Library</p>
         </li>
