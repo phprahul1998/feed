@@ -31,7 +31,6 @@ const Newscard = () => {
             title: item.heading,
             text: item.para,
             url: item.image_url,
-            files: [item.image_url], // Add image file
           })
           .then(() => console.log("Content shared successfully!"))
           .catch((error) => console.error("Error sharing content:", error));
