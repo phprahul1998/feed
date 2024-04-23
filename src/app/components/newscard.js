@@ -66,7 +66,7 @@ const Newscard = () => {
         onTransitionEnd={handleTransitionEnd}
       >
         {newsData.map((item, index) => (
-          <SwiperSlide>
+          <SwiperSlide key={index}>
             <div
               className="NewsCard"
               key={index}
