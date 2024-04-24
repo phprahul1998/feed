@@ -47,16 +47,13 @@ const Newscard = () => {
       console.error("Error sharing content:", error);
     }
   }
-
   function handleTransitionEnd(swiper) {
     const currentIndex = swiper.activeIndex;
     if (currentIndex > slideIndex) {
       setSlideIndex(currentIndex);
       if ((currentIndex + 1) % 5 === 0) {
-        // Check if the next slide is a multiple of 5
-        const nextPage = Math.floor((currentIndex + 1) / 5); // Calculate the next page
-        console.log(nextPage);
-        getNewsFeeds(nextPage * 5, 5); // Fetch the next 5 news starting from the next page
+        const nextPage = Math.floor((currentIndex + 1) / 5);
+        getNewsFeeds(nextPage * 5, 5);
       }
     }
   }
