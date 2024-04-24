@@ -11,8 +11,12 @@ export default async function handler(req, res) {
     if (req.method === "OPTIONS") {
       return res.status(200).end();
     }
+    const { offset, limit } = req.body;
     const response = await axios.get(
-      "https://vaani.softage.net/vaani/api/v1/news"
+      "https://vaani.softage.net/vaani/api/v1/news",
+      {
+        data: { offset, limit },
+      }
     );
     const data = response.data;
     res.status(200).json(data);
