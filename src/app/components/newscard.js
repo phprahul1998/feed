@@ -52,10 +52,11 @@ const Newscard = () => {
     const currentIndex = swiper.activeIndex;
     if (currentIndex > slideIndex) {
       setSlideIndex(currentIndex);
-      setIntervalCounter(intervalCounter + 1);
-      if (intervalCounter !== 0 && intervalCounter % 5 === 0) {
-        console.log(intervalCounter);
-        getNewsFeeds(intervalCounter, 5);
+      if ((currentIndex + 1) % 5 === 0) {
+        // Check if the next slide is a multiple of 5
+        const nextPage = Math.floor((currentIndex + 1) / 5); // Calculate the next page
+        console.log(nextPage);
+        getNewsFeeds(nextPage * 5, 5); // Fetch the next 5 news starting from the next page
       }
     }
   }
