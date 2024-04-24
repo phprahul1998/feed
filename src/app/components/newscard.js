@@ -12,7 +12,7 @@ const Newscard = () => {
   const [slideIndex, setSlideIndex] = useState(0);
   const [intervalCounter, setIntervalCounter] = useState(0);
   useEffect(() => {
-    getNewsFeeds(0, 10);
+    getNewsFeeds(0, 5);
   }, []);
 
   function getNewsFeeds(offset, limit) {
@@ -53,8 +53,10 @@ const Newscard = () => {
     if (currentIndex > slideIndex) {
       setSlideIndex(currentIndex);
       setIntervalCounter(intervalCounter + 1);
-      if (intervalCounter !== 0 && intervalCounter % 5 === 0) {
-        getNewsFeeds(currentIndex, 10);
+
+      console.log(intervalCounter);
+      if (intervalCounter !== 0 && intervalCounter % 10 === 0) {
+        getNewsFeeds(intervalCounter, 5);
       }
     }
   }
