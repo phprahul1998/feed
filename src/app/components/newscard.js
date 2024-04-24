@@ -53,10 +53,8 @@ const Newscard = () => {
     if (currentIndex > slideIndex) {
       setSlideIndex(currentIndex);
       setIntervalCounter(intervalCounter + 1);
-
-      console.log(intervalCounter);
       if (intervalCounter !== 0 && intervalCounter % 5 === 0) {
-        getNewsFeeds(intervalCounter, 5);
+        getNewsFeeds(currentIndex, 5);
       }
     }
   }
