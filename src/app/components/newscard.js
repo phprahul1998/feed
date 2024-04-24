@@ -55,7 +55,7 @@ const Newscard = () => {
       setIntervalCounter(intervalCounter + 1);
 
       console.log(intervalCounter);
-      if (intervalCounter !== 0 && intervalCounter % 10 === 0) {
+      if (intervalCounter !== 0 && intervalCounter % 5 === 0) {
         getNewsFeeds(intervalCounter, 5);
       }
     }
