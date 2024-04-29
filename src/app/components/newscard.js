@@ -78,7 +78,7 @@ const Newscard = () => {
             }}
           >
             <div className="newImg">
-              <img src={item.image_url} alt="" />
+              <img src={item.image_url ? item.image_url : "./no.png"} alt="" />
             </div>
             <div className="newsdata">
               <h1>{item.heading}</h1>
