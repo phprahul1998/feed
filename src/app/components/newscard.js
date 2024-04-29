@@ -12,7 +12,7 @@ const Newscard = () => {
   const [slideIndex, setSlideIndex] = useState(0);
   const [intervalCounter, setIntervalCounter] = useState(0);
   useEffect(() => {
-    getNewsFeeds(intervalCounter, 5);
+    getNewsFeeds(intervalCounter, 10);
   }, []);
 
   function getNewsFeeds(offset, limit) {
@@ -53,7 +53,7 @@ const Newscard = () => {
       setSlideIndex(currentIndex);
       if ((currentIndex + 1) % 5 === 0) {
         const nextPage = Math.floor((currentIndex + 1) / 5);
-        getNewsFeeds(nextPage * 5, 5);
+        getNewsFeeds(nextPage * 10, 10);
       }
     }
   }
@@ -64,7 +64,7 @@ const Newscard = () => {
       slidesPerView={"auto"}
       centeredSlides={true}
       spaceBetween={100}
-      className="mySwiper col-sm-12 col-xs-12 col-md-6 col-lg-5 col-xl-5"
+      className="swiper-container"
       onTransitionEnd={handleTransitionEnd}
     >
       {newsData.map((item, index) => (

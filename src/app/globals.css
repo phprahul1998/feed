@@ -34,24 +34,6 @@ li {
   overflow-x: hidden;
 }
 
-/* .title {
-  display: flex;
-  position: fixed;
-  z-index: 9999;
-  background: transparent;
-  padding-bottom: 40px;
-  justify-content: space-between;
-  text-align: center;
-  width: 100%;
-} */
-.text-mute {
-  color: #979797 !important;
-}
-.title h4 {
-  color: #fff;
-  font-size: 20px;
-}
-
 ::-webkit-scrollbar {
   width: 0px;
   background: transparent;
@@ -84,7 +66,7 @@ li {
 
 .bottom-nav ul li {
   color: #fff;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 900;
   text-align: center;
 }
@@ -154,4 +136,63 @@ body {
   width: 100%;
   height: 100%;
   margin-left: initial !important;
+}
+
+.swiper-container {
+  width: 50%;
+  max-width: fit-content;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-top: 15px;
+}
+.fixed-bottom {
+  width: 50%;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+ol,
+ul {
+  padding-left: 0rem !important;
+}
+.title {
+  z-index: 9999;
+  background: transparent;
+  padding-bottom: 40px;
+  justify-content: space-between;
+  text-align: center;
+  width: 50%;
+  max-width: fit-content;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+.text-mute {
+  color: #979797 !important;
+}
+.title h4 {
+  color: #fff;
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+  .title {
+    width: 100%;
+  }
+  .fixed-bottom {
+    width: 100%;
+  }
+  .swiper-container {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .title {
+    width: 100%;
+  }
+  .fixed-bottom {
+    width: 100%;
+  }
+  .swiper-container {
+    width: 100%;
+  }
 }
