@@ -51,7 +51,9 @@ const Newscard = () => {
     const currentIndex = swiper.activeIndex;
     if (currentIndex > slideIndex) {
       setSlideIndex(currentIndex);
-      if ((currentIndex + 1) % 5 === 0) {
+      console.log("currentIndex :" + currentIndex);
+      console.log("currentIndex + 1 : " + (currentIndex + 1));
+      if ((currentIndex + 1) % 10 === 0) {
         const nextPage = Math.floor((currentIndex + 1) / 5);
         getNewsFeeds(nextPage * 10, 10);
       }
