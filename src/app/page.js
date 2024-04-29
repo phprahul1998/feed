@@ -6,10 +6,10 @@ import Navbar from "./components/navbar";
 
 export default function Home() {
   return (
-    <div style={{ overflow: "hidden" }}>
+    <>
       <Navbar />
       <Newscard />
       <Footer />
-    </div>
+    </>
   );
 }
